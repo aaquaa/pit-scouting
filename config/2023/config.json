@@ -25,6 +25,12 @@
             "Other": "Other"
         },
         {
+          "title": "Size of Drivebase",
+          "type": "number",
+          "required": false,
+          "code": "adfasfsa"
+        },
+        {
           "code": "asdfasdfas",
           "title": "Intake Location",
           "type": "select",
@@ -33,6 +39,7 @@
             "Ground": "Ground",
             "Station": "Station",
             "Both": "Both"
+          }
         },
         {
           "code": "aal",
@@ -85,6 +92,7 @@
             "Park": "Park",
             "Shallow": "Shallow",
             "Deep": "Deep"
+          }
         },
         {
           "code": "co",
