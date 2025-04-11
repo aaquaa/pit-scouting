@@ -23,6 +23,7 @@
             "Tank": "Tank",
             "Mecanum": "Mecanum",
             "Other": "Other"
+          }
         },
         {
           "title": "Size of Drivebase",
