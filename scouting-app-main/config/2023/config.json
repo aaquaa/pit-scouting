@@ -1,328 +1,100 @@
 {
   "$schema": "../schema.json",
-  "title": "FRC Scout",
-  "page_title": "Reefscape",
+  "title": "Pit Scouting",
+  "page_title": "Pit Scouting",
   "sections": [
     {
-      "name": "Prematch",
-      "preserveDataOnReset": true,
+      "name": "Scouting",
+      "preserveDataOnReset": false,
       "fields": [
         {
-          "title": "Scouter Initials",
-          "type": "text",
-          "required": true,
-          "code": "scouter"
-        },
-        {
-          "title": "Match Number",
+          "title": "Team Number",
           "type": "number",
           "required": true,
           "code": "matchNumber"
         },
         {
-          "title": "Robot",
+          "code": "aewdsafadsas",
+          "title": "Drivebase",
           "type": "select",
           "required": true,
-          "code": "robot",
           "choices": {
-            "R1": "Red 1",
-            "R2": "Red 2",
-            "R3": "Red 3",
-            "B1": "Blue 1",
-            "B2": "Blue 2",
-            "B3": "Blue 3"
-          },
-          "defaultValue": "R1"
+            "Swerve": "Swerve",
+            "Tank": "Tank",
+            "Mecanum": "Mecanum",
+            "Other": "Other"
         },
         {
-          "title": "Team Number",
+          "title": "Size of Drivebase",
           "type": "number",
+          "required": false,
+          "code": "adfasfsa"
+        },
+        {
+          "code": "asdfasdfas",
+          "title": "Intake Location",
+          "type": "select",
           "required": true,
-          "code": "teamNumber"
+          "choices": {
+            "Ground": "Ground",
+            "Station": "Station",
+            "Both": "Both"
         },
         {
-          "title": "No Show",
+          "code": "aal",
+          "title": "L1",
           "type": "boolean",
           "defaultValue": false,
-          "required": false,
-          "code": "noShow"
+          "required": false
         },
         {
-          "title": "Preload",
+          "code": "L2",
+          "title": "L2",
           "type": "boolean",
+          "defaultValue": false,
+          "required": false
+        },
+        {
+          "code": "L3",
+          "title": "L3",
+          "type": "boolean",
+          "defaultValue": false,
+          "required": false
+        },
+        {
+          "code": "L4",
+          "title": "L4",
+          "type": "boolean",
+          "defaultValue": false,
+          "required": false
+        },
+        {
+          "code": "Algae Proccessor",
+          "title": "Algae Proccessor",
+          "type": "boolean",
+          "defaultValue": false,
+          "required": false
+        },
+        {
+          "code": "Algae Shooting",
+          "title": "Algae Shooting",
+          "type": "boolean",
+          "defaultValue": false,
+          "required": false
+        },
+        {
+          "code": "endads",
+          "title": "Endgame",
+          "type": "select",
           "required": true,
-          "defaultValue": true,
-          "code": "pl"
-        }
-      ]
-    },
-    {
-      "name": "Autonomous",
-      "fields": [
-        {
-          "title": "Starting Location",
-          "type": "select",
           "choices": {
-            "amp": "Amp Side",
-            "middle": "Middle",
-            "source": "Source Side",
-            "unsure": "Not Observed"
-          },
-          "defaultValue": "unsure",
-          "required": false,
-          "code": "autoStart"
-        },
-        {
-          "code": "al",
-          "title": "Leave?",
-          "type": "boolean",
-          "defaultValue": false,
-          "required": false
-        },
-        {
-          "code": "aan",
-          "title": "Amp Notes Scored",
-          "type": "counter",
-          "defaultValue": 0,
-          "min": 0,
-          "max": 12,
-          "required": false
-        },
-        {
-          "code": "asn",
-          "title": "Speaker Notes Scored",
-          "type": "counter",
-          "defaultValue": 0,
-          "min": 0,
-          "max": 11,
-          "required": false
-        },
-        {
-          "code": "amc",
-          "title": "Notes Missed",
-          "type": "counter",
-          "defaultValue": 0,
-          "min": 0,
-          "max": 11,
-          "required": false
-        },
-        {
-          "code": "ah",
-          "title": "Ends Auto Holding Note?",
-          "type": "boolean",
-          "defaultValue": false,
-          "required": false
-        }
-      ]
-    },
-    {
-      "name": "Teleop",
-      "fields": [
-        {
-          "code": "an",
-          "title": "Amp Notes Scored",
-          "type": "counter",
-          "defaultValue": 0,
-          "min": 0,
-          "max": 45,
-          "required": false
-        },
-        {
-          "code": "sn",
-          "title": "Speaker Notes Scored",
-          "type": "counter",
-          "defaultValue": 0,
-          "min": 0,
-          "max": 45,
-          "required": false
-        },
-        {
-          "code": "asn",
-          "title": "Amplified Speaker Notes Scored",
-          "type": "counter",
-          "defaultValue": 0,
-          "min": 0,
-          "max": 45,
-          "required": false
-        },
-        {
-          "code": "tmc",
-          "title": "Notes Missed",
-          "type": "counter",
-          "defaultValue": 0,
-          "min": 0,
-          "max": 45,
-          "required": false
-        },
-        {
-          "code": "nl",
-          "title": "Where can it pick up notes?",
-          "type": "select",
-          "choices": {
-            "GROUND": "Ground",
-            "SOURCE": "Source",
-            "BOTH": "Both",
-            "NONE": "Not Attempted"
-          },
-          "defaultValue": "NONE",
-          "required": false
-        }
-      ]
-    },
-    {
-      "name": "Endgame",
-      "fields": [
-        {
-          "code": "et",
-          "title": "Attempted before 20 seconds",
-          "type": "boolean",
-          "defaultValue": false,
-          "required": false
-        },
-        {
-          "code": "es",
-          "title": "Stage",
-          "type": "select",
-          "choices": {
-            "PARK": "Park",
-            "ONSTAGE": "Onstage (Not Spotlit)",
-            "ONSTAGE?SPOTLIT": "Onstage (Spotlit)",
-            "NONE": "Not Attempted"
-          },
-          "defaultValue": "NONE",
-          "required": false
-        },
-        {
-          "code": "esh",
-          "title": "No. of robots on same chain",
-          "type": "counter",
-          "defaultValue": 0,
-          "min": 0,
-          "max": 3,
-          "required": false
-        },
-        {
-          "code": "esl",
-          "title": "Where on the chain did it hang?",
-          "type": "select",
-          "choices": {
-            "LEFT?OR?RIGHT": "Left or Right",
-            "MIDDLE": "Middle",
-            "NONE": "Not Attempted"
-          },
-          "defaultValue": "NONE",
-          "required": false
-        },
-        {
-          "code": "etn",
-          "title": "Trap Notes Scored",
-          "type": "counter",
-          "defaultValue": 0,
-          "min": 0,
-          "max": 3,
-          "required": false
-        }
-      ]
-    },
-    {
-      "name": "Postmatch",
-      "fields": [
-        {
-          "code": "ds",
-          "title": "Driver Skill",
-          "type": "select",
-          "choices": {
-            "1": "Not Effective",
-            "2": "Average",
-            "3": "Very Effective",
-            "NONE": "Not Observed"
-          },
-          "defaultValue": "NONE",
-          "required": false
-        },
-        {
-          "code": "dr",
-          "title": "Defense Rating",
-          "type": "select",
-          "choices": {
-            "1": "Not Effective",
-            "2": "Average",
-            "3": "Very Effective",
-            "NONE": "Not Observed"
-          },
-          "defaultValue": "NONE",
-          "required": false
-        },
-        {
-          "code": "rd",
-          "title": "Robot Problems",
-          "type": "select",
-          "choices": {
-            "TIPPED?OVER": "Tipped Over",
-            "DIED": "Died (Comments)",
-            "BOTH": "Both",
-            "NONE": "None"
-          },
-          "defaultValue": "NONE",
-          "required": false
-        },
-        {
-          "code": "cf",
-          "title": "Yellow/Red Card",
-          "type": "boolean",
-          "defaultValue": false,
-          "required": false
-        },
-        {
-          "title": "Penalty Points",
-          "type": "text",
-          "required": false,
-          "code": "penaltypts",
-          "max": 200
-        },
-        {
-          "code": "cb",
-          "title": "Coopertition Bonus",
-          "type": "boolean",
-          "defaultValue": false,
-          "required": false
-        },
-        {
-          "code": "rp",
-          "title": "Melody & Ensemble RP",
-          "type": "select",
-          "choices": {
-            "MELODY": "Melody",
-            "ENSEMBLE": "Ensemble",
-            "BOTH": "Both",
-            "NONE": "None"
-          },
-          "defaultValue": "NONE",
-          "required": false
-        },
-        {
-          "code": "wlt",
-          "title": "Win/Loss",
-          "type": "select",
-          "choices": {
-            "UNSURE": "Not Observed",
-            "WIN": "Win",
-            "LOSS": "Loss",
-            "TIE": "Tie"
-          },
-          "defaultValue": "UNSURE",
-          "required": false
-        },
-        {
-          "code": "ac",
-          "title": "All information is accurate",
-          "type": "boolean",
-          "defaultValue": true,
-          "required": false
+            "Park": "Park",
+            "Shallow": "Shallow",
+            "Deep": "Deep"
         },
         {
           "code": "co",
-          "title": "Comments",
+          "title": "Mandatory Comments",
           "type": "text",
           "min": 0,
           "max": 10000000,
